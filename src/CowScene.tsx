@@ -6,7 +6,7 @@ import { Suspense, useRef, useState, useEffect } from "react"
 import { Group } from "three"
 
 function Cow() {
-    const { scene } = useGLTF("/assets/3d/cow_centered.glb");
+    const { scene } = useGLTF(process.env.PUBLIC_URL + "/assets/3d/cow_centered.glb");
     const duckRef = useRef<Group>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [rotationSpeed, setRotationSpeed] = useState({ x: 0, y: 0 });
